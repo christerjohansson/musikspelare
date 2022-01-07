@@ -1,6 +1,6 @@
-# Spotifire 🔥
+# ReactSpot - Musikspelare 🔥
 
-Add some fire to your Spotify music playlists 🎧
+Add some react to your Spotify music playlists 🎧
 
 ## Built With
 
@@ -13,7 +13,7 @@ Add some fire to your Spotify music playlists 🎧
 
 ## Preview
 
-Visit and use the live app [here](https://spotifire.vercel.app/):
+<img src="./screenshots/MainApp.png" height="475">
 
 ## Getting Started
 
@@ -41,16 +41,16 @@ To get a local copy up and running follow these simple steps.
 2.  Clone the forked repo
 
     ```sh
-    git clone https://github.com/your_name/Spotifire.git
+    git clone https://github.com/christerjohansson/musikspelare.git
     ```
 
 3.  Go to the project directory, create a `.env` file
 
     ```sh
-    NEXTAUTH_URL = "http://localhost:3000 for dev environment"
+    NEXTAUTH_URL = "http://localhost:3000"
     NEXT_PUBLIC_CLIENT_SECRET = "Spotify Client Secret"
     NEXT_PUBLIC_CLIENT_ID = "Spotify Client Id"
-    JWT_SECRET = "Any super secret string"
+    JWT_SECRET = "a very secret string, anything at all"
     ```
 
     Install the packages using
@@ -65,7 +65,14 @@ To get a local copy up and running follow these simple steps.
     yarn install
     ```
 
-4.  Run the app in the development mode using
+4. Go to Spotify Developers [Dashboard](https://developer.spotify.com).
+- Add a new application and give it a proper name.
+- Make sure to add ```http://localhost:3000``` as website URL.
+- Then add a Redirect URI as well: ```http://localhost:3000/api/auth/callback/spotify/```
+(If you get INVALID REDIRECT URI, edit the Redirect URI, or add a new one without a traililng slash)
+- Save your changes!
+
+5.  Run the app in the development mode using
 
     ```sh
     yarn dev
@@ -75,19 +82,11 @@ To get a local copy up and running follow these simple steps.
     The page will reload if you make edits.
 
 ## Screenshots
-
-<img src="https://i.imgur.com/1M6tuG8.png" height="220">
-<img src="https://i.imgur.com/Z3khNGD.png" height="220">
 <p>
-<img src="https://i.imgur.com/gMyOigm.png" height="220">
-<img src="https://i.imgur.com/UzOXutZ.png" height="220">
+<img src="./screenshots/applikation-1.png" height="220">
+<img src="./screenshots/applikation-2.png" height="220">
+<img src="./screenshots/applikation-3.png" height="220">
 </p>
-
-<!-- ROADMAP -->
-
-## Roadmap
-
-See the [open issues](https://github.com/niloysikdar/Spotifire/issues) for a list of proposed features (and known issues). Feel free to raise new issues.
 
 <!-- CONTRIBUTING -->
 
